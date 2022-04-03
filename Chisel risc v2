@@ -1,0 +1,78 @@
+// See LICENSE.txt for license details.
+package examples
+
+import chisel3._
+import chisel3.util._
+
+class Risc extends Module {
+  val io = IO(new Bundle {
+    val isWr   = Input(Bool())
+    val wrAddr = Input(UInt(8.W))
+    val wrData = Input(UInt(32.W))
+    val boot   = Input(Bool())
+    val valid  = Output(Bool())
+    val out    = Output(UInt(32.W))
+  })
+  val file = Mem(256, UInt(32.W))
+  val code = Mem(256, UInt(32.W))
+  val pc   = RegInit(0.U(8.W))
+  
+  val add_op :: imm_op :: Nil = Enum(2)
+  
+  val inst = code(pc)
+  val op   = inst(31,24)
+  val rci  = inst(23,16)
+  var rai  = inst(15, 8)
+  var rbi  = inst( 7, 0)
+
+  var ra = Mux(rai === 0.U, 0.U, file(rai))
+  var rb = Mux(rbi === 0.U, 0.U, file(rbi))
+  var rc = Wire(UInt(32.W))
+  var w=0;
+  io.valid := false.B
+  io.out   := 0.U
+  rc       := 0.U
+ /// var a =0
+ // var b =0	
+  
+var a= RegInit(0.U(8.W))
+var b= RegInit(0.U(8.W))
+var c= RegInit(0.U(32.W))
+
+a=rai
+b=rbi
+
+
+  when (io.isWr) {
+    code(io.wrAddr) := io.wrData
+  } .elsewhen (io.boot) {
+    pc := 0.U
+  } .otherwise {
+    switch(op) {
+      is(add_op) {for(k<- 0 to 7){c = c + file(a)*file(b)
+		a=a+1.U
+		b=b+1.U }
+//		printf(p"\n c value is = $c")	}
+		rc:= c	} 
+      is(imm_op) { rc := (rai << 8.U) | rbi }
+    }
+    
+    		
+    io.out := rc
+    printf(p"\n io.out value is = $io.out")	
+
+    
+    when (rci === 255.U) {
+      io.valid := true.B
+    } .otherwise {
+      file(rci) := rc
+     }
+
+
+    //printf(p"\n rc value is = $rc")
+     
+    pc := pc + 1.U
+    printf(p"\n pc value is = $pc")
+    
+  }
+}
