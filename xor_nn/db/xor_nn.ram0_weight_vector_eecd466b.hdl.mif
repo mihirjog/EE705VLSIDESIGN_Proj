@@ -1,0 +1,25 @@
+-- begin_signature
+-- weight_vector(weights
+-- 3
+-- layer_no
+-- 1
+-- neuron_no
+-- 1
+-- addr_W
+-- 2
+-- data_w
+-- 16
+-- file
+-- "w_1_1.txt")
+-- end_signature
+WIDTH=16;
+DEPTH=3;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	2 :	0011000000000000;
+	1 :	0010000000000000;
+	0 :	0001000000000000;
+END;

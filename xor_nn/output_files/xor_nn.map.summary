@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Sun Apr 10 13:04:51 2022
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : xor_nn
+Top-level Entity Name : xor_nn
+Family : Cyclone IV GX
+Total logic elements : 477
+    Total combinational functions : 477
+    Dedicated logic registers : 9
+Total registers : 9
+Total pins : 49
+Total virtual pins : 0
+Total memory bits : 2,883,584
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

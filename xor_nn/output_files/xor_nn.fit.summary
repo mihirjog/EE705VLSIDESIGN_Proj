@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sat Mar 19 23:31:09 2022
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : xor_nn
+Top-level Entity Name : sigmoid
+Family : Cyclone IV GX
+Device : EP4CGX150DF31C7
+Timing Models : Final
+Total logic elements : 106 / 149,760 ( < 1 % )
+    Total combinational functions : 104 / 149,760 ( < 1 % )
+    Dedicated logic registers : 3 / 149,760 ( < 1 % )
+Total registers : 3
+Total pins : 33 / 508 ( 6 % )
+Total virtual pins : 0
+Total memory bits : 1,048,576 / 6,635,520 ( 16 % )
+Embedded Multiplier 9-bit elements : 0 / 720 ( 0 % )
+Total GXB Receiver Channel PCS : 0 / 8 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 8 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 8 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 8 ( 0 % )
+Total PLLs : 0 / 8 ( 0 % )

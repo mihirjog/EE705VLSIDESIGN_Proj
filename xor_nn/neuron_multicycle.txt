@@ -1,0 +1,61 @@
+module neuron
+#(parameter inputs=3, layer_no=1, neuron_no=1, data_w=16, file="w_1_1.txt")
+(
+	input		clk,
+	input		[inputs*data_w-1:0] in,
+	output	[data_w-1:0] out,
+	output	reg [data_w-1:0] prod0 = 0,
+	output	reg [data_w-1:0] prod1 = 0,
+	output	reg [data_w-1:0] prod2 = 0
+);
+
+	parameter addr_W = $clog2(inputs);
+	
+	reg	[addr_W-1:0] w_add;
+	wire	[data_w-1:0] w_out;
+	
+	reg	[data_w-1:0] 	out_r;
+	reg	[data_w*2-1:0] out_temp;
+	reg	[data_w-1:0] 	prod [inputs-1:0];
+	reg	[data_w-1:0] 	sum = 0;
+	
+	integer i = 0;
+	
+	assign out = out_r;
+	
+	weight_vector #(inputs, layer_no, neuron_no, addr_W, data_w, file) w_uut(
+		clk,
+		w_add,
+		w_out	
+	);
+
+	initial begin
+		prod[0] = 0;
+		prod[1] = 0;
+		prod[2] = 0;
+	end
+	
+	always @ * begin
+		w_add		= i;
+		prod0 = prod[0];
+		prod1 = prod[1];
+		prod2 = prod[2];
+	end
+	
+	always @ (posedge clk)
+	begin
+	
+		if(i < inputs) begin
+			out_temp	= in[16*i+:16] * w_out;
+			prod[i]	= out_temp >> 12;
+			sum		= sum + prod[i];
+			i			= i + 1;
+		end
+		
+		if(i == inputs)
+			out_r = sum;
+		
+	end
+
+
+endmodule

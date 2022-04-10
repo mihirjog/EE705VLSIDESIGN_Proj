@@ -1,0 +1,241 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/Desktop/FPGA Projects/neural network/xor_nn/simulation/qsim
+vhard_block
+Z1 !s110 1647714084
+!i10b 1
+!s100 AoS`b;G8MTfYZ^[Gz]9<21
+ISF>:=f<K^XciXYR=gP8[g3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1647714083
+Z4 8xor_nn.vo
+Z5 Fxor_nn.vo
+L0 10279
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1647714084.000000
+Z8 !s107 xor_nn.vo|
+Z9 !s90 -work|work|xor_nn.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vneuron
+Z12 !s110 1649575057
+!i10b 1
+!s100 nE5O>RKmc3f7X6;K11gaV2
+I3BdXYKEOSXUB_CWTL:UJl0
+R2
+Z13 d/home/krish/Downloads/xor_nn/simulation/qsim
+w1649575056
+R4
+R5
+Z14 L0 32
+R6
+r1
+!s85 0
+31
+Z15 !s108 1649575057.000000
+R8
+R9
+!i113 1
+R10
+R11
+vneuron_temp
+Z16 !s110 1648991514
+!i10b 1
+!s100 :@m>UG]efLg4DM=Hl;R4O1
+I9EVfUQcIz@_OO;7DlWDZn0
+R2
+R0
+w1648991512
+R4
+R5
+R14
+R6
+r1
+!s85 0
+31
+Z17 !s108 1648991514.000000
+R8
+R9
+!i113 1
+R10
+R11
+vneuron_temp_vlg_vec_tst
+R16
+!i10b 1
+!s100 ddIU`[e7WQ[eKo3JP`j6=0
+IH593BllT`400lKQg[zL[]2
+R2
+R0
+w1648991511
+Z18 8Waveform1.vwf.vt
+Z19 FWaveform1.vwf.vt
+Z20 L0 30
+R6
+r1
+!s85 0
+31
+R17
+Z21 !s107 Waveform1.vwf.vt|
+Z22 !s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+R11
+vneuron_vlg_vec_tst
+R12
+!i10b 1
+!s100 G;`V3US4O`lEhc7<WN^_<2
+IC99LP]`cUmcSnCH:>V?Vo3
+R2
+R13
+w1649575055
+R18
+R19
+R20
+R6
+r1
+!s85 0
+31
+R15
+R21
+R22
+!i113 1
+R10
+R11
+vsigmoid
+R1
+!i10b 1
+!s100 YC7hIC@fD=j`l?Ae`>X_51
+IkWKT:`a7<CFKdXSg_?TQj2
+R2
+R0
+R3
+R4
+R5
+R14
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vsigmoid_vlg_vec_tst
+R1
+!i10b 1
+!s100 IB3gcHVo]_BcaQKj7IS>S0
+IcaQIA6Ve6Gae[g]LQ8ziN3
+R2
+R0
+w1647714081
+Z23 8Waveform.vwf.vt
+Z24 FWaveform.vwf.vt
+R20
+R6
+r1
+!s85 0
+31
+R7
+Z25 !s107 Waveform.vwf.vt|
+Z26 !s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+vweight_vector
+Z27 !s110 1649054409
+!i10b 1
+!s100 K6ZjT26DX:S]9]XBzYPAg0
+IRM@7T<D`=BX15P<SkO8`j1
+R2
+R0
+w1649054407
+R4
+R5
+R14
+R6
+r1
+!s85 0
+31
+Z28 !s108 1649054409.000000
+R8
+R9
+!i113 1
+R10
+R11
+vweight_vector_vlg_vec_tst
+R27
+!i10b 1
+!s100 GnbD91g>FXjDVMTe]:9_E3
+Imbg_`8^ZQjWmkb0MCVLVf1
+R2
+R0
+w1649054406
+R23
+R24
+R20
+R6
+r1
+!s85 0
+31
+R28
+R25
+R26
+!i113 1
+R10
+R11
+vxor_nn
+Z29 !s110 1649576201
+!i10b 1
+!s100 XO^]ZN:fAaKA0cn7fI<?V1
+I23E;XD<HNho@J=k:;c1H<3
+R2
+R13
+w1649576200
+R4
+R5
+R14
+R6
+r1
+!s85 0
+31
+!s108 1649576200.000000
+R8
+R9
+!i113 1
+R10
+R11
+vxor_nn_vlg_vec_tst
+R29
+!i10b 1
+!s100 d[:V6mHY6ldAdi16Z9<8M0
+Ize:MjM=7S0TKk;m6=RP`33
+R2
+R13
+w1649576199
+R23
+R24
+R20
+R6
+r1
+!s85 0
+31
+!s108 1649576201.000000
+R25
+R26
+!i113 1
+R10
+R11
